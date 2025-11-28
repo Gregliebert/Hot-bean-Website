@@ -1,7 +1,8 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hot Beans Web Dev - Modern Redesign</title>
     <style>
         /* --- 1. GLOBAL & RESET --- */
@@ -75,6 +76,7 @@
                 font-size: 1.1em;
                 border-radius: 5px;
                 transition: all 0.3s ease;
+                display: inline-block; /* Fix for padding on inline elements */
             }
 
                 .topnav a:hover {
@@ -160,8 +162,8 @@
             padding: 40px 0;
             margin-top: 50px;
             background: rgba(0,0,0,0.5);
-            /* Partner logos background */
-            background-image: url('Images/OraclePartner.jpg"), url('Images/MicrosoftPartner.jpg'), url('Images/mysqlpartner.png');
+            /* FIXED: Standardized to 'images/' and fixed the quote mismatch error */
+            background-image: url('images/OraclePartner.jpg'), url('images/MicrosoftPartner.jpg'), url('images/mysqlpartner.png');
             background-position: 20% center, 50% center, 80% center;
             background-size: 80px;
             background-repeat: no-repeat;
@@ -192,6 +194,11 @@
                 height: 150px;
                 margin-top: 20px;
             }
+            
+            .footer {
+                 background-size: 50px; /* Smaller partner logos on mobile */
+                 background-position: 10% center, 50% center, 90% center;
+            }
         }
     </style>
 </head>
@@ -199,6 +206,7 @@
 
     <div class="HeaderRow">
         <div class="HeaderColumnLeft">
+            <!-- FIXED: Ensure folder is named 'images' lowercase -->
             <img src="images/logo.png" alt="Logo">
         </div>
         <div class="HeaderColumnRight">
@@ -238,7 +246,8 @@
         </div>
 
         <div class="columnRight">
-            <img src="Images/logo.png" class="spinning-logo" alt="Spinning Logo">
+            <!-- FIXED: Changed 'Images' to 'images' -->
+            <img src="images/logo.png" class="spinning-logo" alt="Spinning Logo">
         </div>
 
     </div>
@@ -247,12 +256,12 @@
 
     <table class="social-table">
         <tr>
-            <td><img width="40" src="Images/Greg Liebert company.png" alt="Greg"></td>
-            <td><img width="40" src="Images/sfx images.png" alt="SFX"></td>
-            <td><img width="40" src="Images/instagram.png" alt="Insta"></td>
+            <!-- FIXED: Changed 'Images' to 'images' for all -->
+            <td><img width="40" src="images/Greg Liebert company.png" alt="Greg"></td>
+            <td><img width="40" src="images/sfx images.png" alt="SFX"></td>
+            <td><img width="40" src="images/instagram.png" alt="Insta"></td>
         </tr>
     </table>
 
 </body>
-
 </html>
