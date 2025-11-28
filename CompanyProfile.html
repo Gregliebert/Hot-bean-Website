@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile - The Hot Beans</title>
+    <style>
+        /* Basic Page Settings */
+        body {
+            background-color: #153846; /* Solid dark teal color */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: white;
+        }
+
+        /* Header Section */
+        header {
+            background-color: #000000;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 2px solid #00aaff;
+        }
+
+        h1 {
+            color: #00aaff;
+            margin: 0;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            background-color: #333;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: inline-block;
+        }
+
+        .navbar a:hover {
+            background-color: #555;
+            text-decoration: underline;
+        }
+
+        /* Main Container */
+        .container {
+            width: 800px;
+            margin: 0 auto; /* Centers the content */
+            padding: 20px;
+            background-color: #0d232e;
+        }
+
+        /* Section Styling */
+        .section-box {
+            border: 1px solid #555;
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: #1a4252;
+        }
+
+        .main-photo {
+            width: 100%;
+            border: 5px solid white;
+        }
+
+        /* Profile "Cards" */
+        .profile {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin-bottom: 20px;
+            background-color: #fff;
+            color: #333; /* Dark text on white background */
+            overflow: hidden; /* Clears floats */
+        }
+
+        .profile img {
+            float: left;
+            width: 150px;
+            height: auto;
+            margin-right: 20px;
+            border: 1px solid #000;
+        }
+
+        .profile h3 {
+            margin-top: 0;
+            color: #00aaff;
+        }
+
+        .profile p {
+            font-size: 14px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #000;
+            font-size: 12px;
+            border-top: 1px solid #555;
+        }
+
+        .partners {
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>The Hot Beans</h1>
+        <p>Web Development Excellence</p>
+    </header>
+
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="Profile.html" style="color: #00aaff;">Profile</a> <a href="#">Employees</a>
+        <a href="#">Vacancies</a>
+        <a href="#">Join Us</a>
+        <a href="#">Links</a>
+    </div>
+
+    <div class="container">
+        
+        <div class="section-box" style="text-align: center;">
+            <h2>Meet The Team</h2>
+            <p>Here are the people who work at The Hot Beans.</p>
+            <img src="images/employees.jpg" alt="Team Photo" class="main-photo">
+        </div>
+
+        <div class="profile">
+            <img src="images/rachel.jpeg" alt="Rachel">
+            <h3>Rachel - CEO</h3>
+            <p>Rachel is the Chief Executive Officer. She has been running the company for many years and makes sure everything goes according to plan.</p>
+        </div>
+
+        <div class="profile">
+            <img src="images/james.jpg" alt="James">
+            <h3>James - Senior Developer</h3>
+            <p>James is our main programmer. He knows many coding languages and builds the websites for our clients.</p>
+        </div>
+
+        <div class="profile">
+            <img src="images/thomas.jpeg" alt="Thomas">
+            <h3>Thomas - Designer</h3>
+            <p>Thomas is in charge of how things look. He designs the graphics and the layouts for the webpages.</p>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="partners">
+            Partners: Oracle | Microsoft | MySQL
+        </div>
+        <p>&copy; 2025 The Hot Beans</p>
+    </footer>
+
+</body>
+</html>

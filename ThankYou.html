@@ -1,0 +1,249 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - The Hot Beans</title>
+    <style>
+        /* --- CORE DESIGN (Matching Vacancies & JoinUs) --- */
+        body {
+            background-color: #1a2634;
+            font-family: Arial, sans-serif;
+            color: white;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-box {
+            width: 80px;
+            height: 80px;
+            background-color: black;
+            border: 2px solid #0ea5e9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: orange;
+            font-weight: bold;
+            font-size: 12px;
+        }
+
+        .header-title h1 {
+            color: #0ea5e9;
+            margin: 0;
+            font-size: 32px;
+            text-transform: uppercase;
+        }
+
+        .header-title p {
+            color: #ccc;
+            margin: 5px 0 0 0;
+            font-size: 14px;
+        }
+
+        nav {
+            background-color: #0f172a;
+            border-top: 1px solid #334155;
+            border-bottom: 1px solid #334155;
+            padding: 10px 0;
+        }
+
+            nav ul {
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+                text-align: center;
+            }
+
+                nav ul li {
+                    display: inline;
+                    margin: 0 15px;
+                }
+
+            nav a {
+                text-decoration: none;
+                color: #cbd5e1;
+                font-size: 16px;
+            }
+
+                nav a:hover {
+                    color: white;
+                    text-decoration: underline;
+                }
+
+        /* Main Content */
+        main {
+            flex-grow: 1;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center; /* Center content vertically too */
+        }
+
+        .content-box {
+            background-color: #243447;
+            padding: 40px;
+            border-radius: 8px;
+            border: 1px solid #475569;
+            text-align: center;
+            max-width: 600px;
+            width: 100%;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        }
+
+        h2 {
+            color: #0ea5e9;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            color: #e2e8f0;
+        }
+
+        .dynamic-text {
+            color: #fbbf24; /* Amber color for dynamic names */
+            font-weight: bold;
+        }
+
+        .home-btn {
+            background-color: #0ea5e9;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-block;
+            transition: background-color 0.3s;
+        }
+
+            .home-btn:hover {
+                background-color: #0284c7;
+                text-decoration: none;
+            }
+
+        /* Footer */
+        footer {
+            background-color: #0f172a;
+            padding: 20px;
+            text-align: center;
+            border-top: 1px solid #334155;
+            margin-top: auto;
+        }
+
+        .footer-logos {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo-placeholder {
+            background: white;
+            color: black;
+            padding: 5px 10px;
+            font-size: 12px;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-box">
+            The<br>Hot<br>Beans
+        </div>
+        <div class="header-title">
+            <h1>The Hot Beans</h1>
+            <p>Web Development Excellence © 2025</p>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="employees.html">Employees</a></li>
+            <li><a href="vacancies.html">Vacancies</a></li>
+            <li><a href="Join Us.html">Join Us</a></li>
+            <li><a href="links.html">Links</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="content-box">
+            <!-- Icon -->
+            <div style="font-size: 48px; color: #0ea5e9; margin-bottom: 20px;">
+                &#10003; <!-- Checkmark symbol -->
+            </div>
+
+            <h2>Application Received!</h2>
+
+            <p id="confirmationMessage">
+                Thank you for applying to The Hot Beans. Your details have been successfully submitted to our HR department.
+            </p>
+
+            <a href="index.html" class="home-btn">Return to Home</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-logos">
+            <div class="logo-placeholder" style="color: red;">ORACLE Partner</div>
+
+            <div style="background: white; border-radius: 20px; padding: 5px 15px;">
+                <span style="color:black; margin:0 5px;">Twitter</span> |
+                <span style="color:black; margin:0 5px;">Facebook</span>
+            </div>
+
+            <div class="logo-placeholder" style="color: blue;">MySQL Enterprise</div>
+        </div>
+    </footer>
+
+    <!-- Script to personalize the message using URL parameters -->
+    <script>
+        window.onload = function() {
+            // Get the URL parameters
+            const urlParams = new URLSearchParams(window.location.search);
+            const firstName = urlParams.get('fname');
+            const jobType = urlParams.get('JobType');
+
+            // If we have the data, personalize the message
+            if (firstName && jobType) {
+                const messageElement = document.getElementById('confirmationMessage');
+
+                // Clean the input to prevent basic XSS (security practice)
+                const safeName = firstName.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+                const safeJob = jobType.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+
+                messageElement.innerHTML = `
+                    Thanks <span class="dynamic-text">${safeName}</span>! <br>
+                    We have received your application for the position of <br>
+                    <span class="dynamic-text">${safeJob}</span>.
+                    <br><br>
+                    We will be in touch shortly.
+                `;
+            }
+        };
+    </script>
+
+</body>
+</html>

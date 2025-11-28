@@ -1,0 +1,179 @@
+﻿/* --- RESET & BASICS --- */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    /* ADVANCED: Dark modern background instead of Ivory */
+    background-color: #2c3e50;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+}
+
+/* --- ANIMATION FOR SPINNING IMAGE --- */
+@keyframes spin-right {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* --- HEADER --- */
+.HeaderRow {
+    /* ADVANCED: Linear Gradient instead of solid Antiquewhite */
+    background: linear-gradient(135deg, #e67e22 0%, #d35400 100%);
+    width: 100%;
+    overflow: hidden; /* Clears floats */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    padding: 10px 0;
+}
+
+.HeaderColumnLeft {
+    float: left;
+    width: 30%;
+    height: 150px;
+    /* Center the logo image inside this div */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+    .HeaderColumnLeft img {
+        max-height: 120px;
+        width: auto;
+    }
+
+.HeaderColumnRight {
+    float: right;
+    width: 70%;
+    height: 150px;
+    /* Flexbox for better text alignment */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 40px;
+    color: white;
+}
+
+.HeaderTitle {
+    font-family: 'MS Reference Sans Serif', sans-serif;
+    font-size: 3em;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+}
+
+.HeaderText {
+    font-size: 1.2em;
+    opacity: 0.9;
+}
+
+/* --- NAVIGATION --- */
+.topnav {
+    background-color: #34495e;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+    .topnav a {
+        float: left;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 20px;
+        text-decoration: none;
+        font-size: 17px;
+        transition: background-color 0.3s; /* Smooth hover effect */
+    }
+
+        .topnav a:hover {
+            background-color: #e67e22; /* Matches header orange */
+            color: white;
+        }
+
+/* --- MAIN LAYOUT --- */
+.row {
+    padding: 20px;
+    display: flex; /* Modern layout method */
+    justify-content: center;
+}
+
+.main-row {
+    display: flex;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px; /* Space between columns */
+}
+
+/* Left Column (Empty in your code, but styled just in case) */
+.columnLeft {
+    flex: 1;
+}
+
+/* Center Content */
+.columnCentre {
+    flex: 2; /* Takes up double space */
+    background-color: #ffffff;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2); /* floating effect */
+    padding: 40px;
+    text-align: left;
+}
+
+    .columnCentre h1 {
+        color: #d35400;
+        border-bottom: 2px solid #eee;
+        padding-bottom: 10px;
+    }
+
+    .columnCentre ul {
+        background-color: #f9f9f9;
+        padding: 20px 40px;
+        border-left: 5px solid #d35400;
+    }
+
+/* Right Column (The Spinning Image) */
+.columnRight {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.spinning-logo {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    /* THIS MAKES IT SPIN */
+    animation: spin-right 10s linear infinite;
+    /* Optional: Make it circular */
+    border-radius: 50%;
+    border: 5px solid white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+
+/* --- FOOTER --- */
+.footer {
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #ecf0f1;
+    /* Assuming images are in 'Images/' folder */
+    background-image: url('Images/OraclePartner.png'), url('Images/MicrosoftPartner.pgg'), url('Images/mysqlpartner.png');
+    background-position: 20% center, 50% center, 80% center;
+    background-size: 100px, 100px, 100px;
+    background-repeat: no-repeat;
+    height: 150px;
+}
+
+/* Social Table */
+table {
+    margin: 20px auto;
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+}

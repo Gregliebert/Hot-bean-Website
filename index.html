@@ -1,0 +1,257 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Hot Beans Web Dev - Modern Redesign</title>
+    <style>
+        /* --- 1. GLOBAL & RESET --- */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            /* ADVANCED: Dark Gradient Background */
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            min-height: 100vh;
+        }
+
+        /* --- 2. HEADER SECTION --- */
+        .HeaderRow {
+            /* Glassmorphism Effect */
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 5%;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+        }
+
+        .HeaderColumnLeft img {
+            height: 80px;
+            /* Add a glow to the logo */
+            filter: drop-shadow(0 0 5px rgba(0, 255, 255, 0.5));
+        }
+
+        .HeaderColumnRight {
+            text-align: right;
+        }
+
+        .HeaderTitle {
+            font-size: 2.5em;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            /* Gradient Text */
+            background: linear-gradient(to right, #00c6ff, #0072ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 5px;
+        }
+
+        .HeaderText {
+            color: #ccc;
+            font-size: 0.9em;
+        }
+
+        /* --- 3. NAVIGATION --- */
+        .topnav {
+            background-color: rgba(0, 0, 0, 0.3);
+            text-align: center;
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+            .topnav a {
+                color: #fff;
+                text-decoration: none;
+                padding: 10px 20px;
+                margin: 0 5px;
+                font-size: 1.1em;
+                border-radius: 5px;
+                transition: all 0.3s ease;
+            }
+
+                .topnav a:hover {
+                    background-color: #00c6ff;
+                    color: #000;
+                    box-shadow: 0 0 10px #00c6ff;
+                }
+
+        /* --- 4. MAIN CONTENT LAYOUT --- */
+        .row {
+            padding: 40px 5%;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        /* Left Column (Spacer) */
+        .columnLeft {
+            flex: 1;
+            min-width: 50px;
+        }
+
+        /* Center Content Card */
+        .columnCentre {
+            flex: 3;
+            background: rgba(255, 255, 255, 0.1); /* See-through card */
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: left;
+        }
+
+            .columnCentre h1 {
+                color: #00c6ff;
+                margin-bottom: 10px;
+                border-bottom: 2px solid #0072ff;
+                display: inline-block;
+            }
+
+            .columnCentre ul {
+                margin-top: 20px;
+                margin-left: 20px;
+                line-height: 1.8;
+            }
+
+        /* Right Column (The Spinner) */
+        .columnRight {
+            flex: 2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: visible; /* Allows image to be big */
+        }
+
+        /* --- 5. THE SPINNING IMAGE EFFECT --- */
+        .spinning-logo {
+            width: 250px; /* Make it BIG */
+            height: 250px;
+            object-fit: cover;
+            border-radius: 50%; /* Make it circular */
+            border: 4px solid #00c6ff;
+            /* The Animation */
+            animation: spin-right 8s linear infinite;
+            /* The Glow */
+            box-shadow: 0 0 30px rgba(0, 198, 255, 0.6);
+        }
+
+        @keyframes spin-right {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* --- 6. FOOTER & SOCIALS --- */
+        .footer {
+            text-align: center;
+            padding: 40px 0;
+            margin-top: 50px;
+            background: rgba(0,0,0,0.5);
+            /* Partner logos background */
+            background-image: url('Images/OraclePartner.jpg'), url('Images/MicrosoftPartner.jpg'), url('Images/mysqlpartner.png');
+            background-position: 20% center, 50% center, 80% center;
+            background-size: 80px;
+            background-repeat: no-repeat;
+            height: 150px;
+        }
+
+        table.social-table {
+            margin: -80px auto 20px; /* Pull up over footer */
+            position: relative;
+            background: #fff;
+            padding: 10px 20px;
+            border-radius: 50px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+        }
+
+            table.social-table td {
+                padding: 0 10px;
+            }
+
+        /* Helper for responsive mobile */
+        @media screen and (max-width: 768px) {
+            .row {
+                flex-direction: column;
+            }
+
+            .spinning-logo {
+                width: 150px;
+                height: 150px;
+                margin-top: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="HeaderRow">
+        <div class="HeaderColumnLeft">
+            <img src="images/logo.png" alt="Logo">
+        </div>
+        <div class="HeaderColumnRight">
+            <h1 class="HeaderTitle">The Hot Beans</h1>
+            <p class="HeaderText">Web Development Excellence &copy; 2025</p>
+        </div>
+    </div>
+
+    <div class="topnav">
+        <a href="index.html">Home</a>
+        <a href="Profile.html">Profile</a>
+        <a href="Employee.html">Employees</a>
+        <a href="Vacancies.html">Vacancies</a>
+        <a href="Join Us.html">Join Us</a>
+        <a href="Links.html">Links</a>
+    </div>
+
+    <div class="row">
+
+        <div class="columnLeft"></div>
+
+        <div class="columnCentre">
+            <h1>Welcome to Hot Beans</h1>
+            <h3>Professional Website Development</h3>
+
+            <p>Please browse around the site to find what you are looking for. Follow the links to find more about:</p>
+
+            <ul>
+                <li>Our Company Profile</li>
+                <li>Our Employees & Teams</li>
+                <li>Current Job Vacancies</li>
+                <li>How to apply to work for us</li>
+                <li>Links to our partner sites</li>
+            </ul>
+
+            <h2>Come back soon!</h2>
+        </div>
+
+        <div class="columnRight">
+            <img src="Images/logo.png" class="spinning-logo" alt="Spinning Logo">
+        </div>
+
+    </div>
+
+    <div class="footer"></div>
+
+    <table class="social-table">
+        <tr>
+            <td><img width="40" src="Images/Greg Liebert company.png" alt="Greg"></td>
+            <td><img width="40" src="Images/sfx images.png" alt="SFX"></td>
+            <td><img width="40" src="Images/instagram.png" alt="Insta"></td>
+        </tr>
+    </table>
+
+</body>
+</html>

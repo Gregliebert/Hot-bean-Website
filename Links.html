@@ -1,0 +1,311 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links - The Hot Beans</title>
+    <style>
+        /* --- CORE DESIGN (Matching Vacancies & JoinUs) --- */
+        body {
+            background-color: #1a2634;
+            font-family: Arial, sans-serif;
+            color: white;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-box {
+            width: 80px;
+            height: 80px;
+            background-color: black;
+            border: 2px solid #0ea5e9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: orange;
+            font-weight: bold;
+            font-size: 12px;
+        }
+
+        .header-title h1 {
+            color: #0ea5e9;
+            margin: 0;
+            font-size: 32px;
+            text-transform: uppercase;
+        }
+
+        .header-title p {
+            color: #ccc;
+            margin: 5px 0 0 0;
+            font-size: 14px;
+        }
+
+        nav {
+            background-color: #0f172a;
+            border-top: 1px solid #334155;
+            border-bottom: 1px solid #334155;
+            padding: 10px 0;
+        }
+
+            nav ul {
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+                text-align: center;
+            }
+
+                nav ul li {
+                    display: inline;
+                    margin: 0 15px;
+                }
+
+            nav a {
+                text-decoration: none;
+                color: #cbd5e1;
+                font-size: 16px;
+            }
+
+                nav a:hover {
+                    color: white;
+                    text-decoration: underline;
+                }
+
+                nav a.active {
+                    background-color: #0ea5e9;
+                    color: white;
+                    padding: 5px 15px;
+                    border-radius: 4px;
+                    text-decoration: none;
+                }
+
+        main {
+            flex-grow: 1;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 900px;
+            display: flex;
+            gap: 40px;
+        }
+
+        .content-area {
+            flex: 2;
+            background-color: #243447;
+            padding: 30px;
+            border-radius: 8px;
+            border: 1px solid #475569;
+        }
+
+        .side-logo-container {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .big-circle {
+            width: 150px;
+            height: 150px;
+            background-color: #7f1d1d;
+            border-radius: 50%;
+            border: 4px solid #0ea5e9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: orange;
+            font-weight: bold;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 24px;
+            transform: rotate(-10deg);
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: #0f172a;
+            padding: 20px;
+            text-align: center;
+            border-top: 1px solid #334155;
+        }
+
+        .footer-logos {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo-placeholder {
+            background: white;
+            color: black;
+            padding: 5px 10px;
+            font-size: 12px;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+
+        /* --- LINKS SPECIFIC STYLES --- */
+        h2 {
+            color: #0ea5e9;
+            border-bottom: 1px solid #475569;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+
+        .links-list {
+            list-style: none;
+            padding: 0;
+        }
+
+            .links-list li {
+                background-color: #1e293b;
+                border: 1px solid #334155;
+                margin-bottom: 15px;
+                padding: 15px;
+                border-radius: 4px;
+                transition: border-color 0.3s;
+                display: flex;
+                align-items: center;
+            }
+
+                .links-list li:hover {
+                    border-color: #0ea5e9;
+                }
+
+        .link-icon {
+            font-size: 24px;
+            margin-right: 15px;
+            color: #ccc;
+            width: 30px;
+            text-align: center;
+        }
+
+        .link-content {
+            flex-grow: 1;
+        }
+
+        .link-title {
+            display: block;
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
+
+            .link-title:hover {
+                color: #0ea5e9;
+                text-decoration: underline;
+            }
+
+        .link-desc {
+            display: block;
+            font-size: 14px;
+            color: #94a3b8;
+            margin-top: 4px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-box">
+            The<br>Hot<br>Beans
+        </div>
+        <div class="header-title">
+            <h1>The Hot Beans</h1>
+            <p>Web Development Excellence © 2025</p>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="employees.html">Employees</a></li>
+            <li><a href="vacancies.html">Vacancies</a></li>
+            <li><a href="Join Us.html">Join Us</a></li>
+            <li><a href="links.html" class="active">Links</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="container">
+            <!-- Left Side: Content -->
+            <div class="content-area">
+                <h2>Useful Resources</h2>
+                <p>Below is a curated list of external resources and partner websites that we frequently use and recommend.</p>
+
+                <ul class="links-list">
+                    <!-- Google Link -->
+                    <li>
+                        <div class="link-icon" style="color: #4285F4;">G</div>
+                        <div class="link-content">
+                            <a href="https://www.google.com" target="_blank" class="link-title">Google Search</a>
+                            <span class="link-desc">The world's most popular search engine.</span>
+                        </div>
+                    </li>
+
+                    <!-- Microsoft Link -->
+                    <li>
+                        <div class="link-icon" style="color: #00a4ef;">M</div>
+                        <div class="link-content">
+                            <a href="https://www.microsoft.com" target="_blank" class="link-title">Microsoft</a>
+                            <span class="link-desc">Technology news, software updates, and developer tools.</span>
+                        </div>
+                    </li>
+
+                    <!-- Oracle Link (Since they are a partner in footer) -->
+                    <li>
+                        <div class="link-icon" style="color: #f80000;">O</div>
+                        <div class="link-content">
+                            <a href="https://www.oracle.com" target="_blank" class="link-title">Oracle</a>
+                            <span class="link-desc">Database solutions and cloud infrastructure.</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Right Side: Logo -->
+            <div class="side-logo-container">
+                <div class="big-circle">
+                    The<br>Hot<br>Beans
+                </div>
+                <div style="margin-top: 20px; text-align: center; color: #ccc;">
+                    <p>Connecting you<br>to the web.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-logos">
+            <div class="logo-placeholder" style="color: red;">ORACLE Partner</div>
+
+            <div style="background: white; border-radius: 20px; padding: 5px 15px;">
+                <span style="color:black; margin:0 5px; cursor:pointer;">Twitter</span> |
+                <span style="color:black; margin:0 5px; cursor:pointer;">Facebook</span>
+            </div>
+
+            <div class="logo-placeholder" style="color: blue;">MySQL Enterprise</div>
+        </div>
+    </footer>
+
+</body>
+</html>

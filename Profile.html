@@ -1,0 +1,288 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - The Hot Beans</title>
+    <style>
+        /* General Reset & Typography */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to bottom, #153846, #0d232e); /* Dark teal gradient matching average.jpg */
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header Style */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+        }
+        
+        /* Simulating the logo from the image using CSS */
+        .logo-placeholder {
+            width: 60px;
+            height: 60px;
+            background: #000;
+            border-radius: 50%;
+            border: 2px solid #00aaff; /* Cyan glow */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+            color: orange;
+            text-align: center;
+            margin-right: 15px;
+            box-shadow: 0 0 10px #00aaff;
+        }
+
+        .company-title {
+            text-align: right;
+        }
+
+        .company-title h1 {
+            margin: 0;
+            color: #00aaff; /* Cyan text color from average.jpg */
+            font-size: 24px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .company-title p {
+            margin: 5px 0 0;
+            font-size: 12px;
+            color: #bdc3c7;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: rgba(0, 0, 0, 0.3);
+            text-align: center;
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover, nav a.active {
+            color: #00aaff;
+        }
+
+        /* Main Content Area */
+        main {
+            flex: 1;
+            padding: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        /* Hero Section (Team Photo) */
+        .hero-section {
+            background-color: rgba(255, 255, 255, 0.1); /* Glassmorphism background */
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 40px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+
+        .hero-section h2 {
+            color: #00aaff;
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+
+        .hero-img {
+            width: 100%;
+            max-width: 900px;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* Profiles Grid */
+        .profiles-grid {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .profile-card {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            flex: 1;
+            min-width: 250px;
+            text-align: center;
+            transition: transform 0.3s ease;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .profile-card:hover {
+            transform: translateY(-5px);
+            background-color: rgba(255, 255, 255, 0.15);
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%; /* Circular images */
+            border: 3px solid #00aaff;
+            margin-bottom: 15px;
+        }
+
+        .profile-name {
+            font-size: 20px;
+            font-weight: bold;
+            color: #fff;
+            margin: 10px 0 5px;
+        }
+
+        .profile-role {
+            color: #00aaff;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+
+        .profile-bio {
+            font-size: 14px;
+            line-height: 1.5;
+            color: #ddd;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #0a151b; /* Darker footer */
+            padding: 30px;
+            margin-top: auto;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+        }
+
+        .partners {
+            display: flex;
+            gap: 20px;
+        }
+
+        .partner-box {
+            background: white;
+            color: black;
+            padding: 5px 10px;
+            font-size: 12px;
+            font-weight: bold;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-area">
+            <div class="logo-placeholder">
+                The Hot<br>Beans
+            </div>
+        </div>
+        <div class="company-title">
+            <h1>The Hot Beans</h1>
+            <p>Web Development Excellence &copy; 2025</p>
+        </div>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="Profile.html" class="active">Profile</a>
+        <a href="Employee.html">Employees</a></a>
+        <a href="Vacancies.html">Vacancies</a>
+        <a href="Join Us.html">Join Us</a>
+        <a href="Links.html">Links</a>
+    </nav>
+
+    <main>
+        
+        <section class="hero-section">
+            <h2>Meet The Team</h2>
+            <p style="margin-bottom: 20px; color: #ccc;">Our dedicated professionals driving web development excellence.</p>
+            <img src="images/employees.jpg" alt="The Hot Beans Team" class="hero-img">
+        </section>
+
+        <section class="profiles-grid">
+            
+            <div class="profile-card">
+                <img src="images/rachel.jpeg" alt="Rachel" class="profile-img">
+                <div class="profile-name">Rachel</div>
+                <div class="profile-role">Chief Executive Officer</div>
+                <div class="profile-bio">
+                    Rachel leads The Hot Beans with over 15 years of experience in digital strategy and leadership.
+                </div>
+            </div>
+
+            <div class="profile-card">
+                <img src="images/james.jpg" alt="James" class="profile-img">
+                <div class="profile-name">James</div>
+                <div class="profile-role">Senior Developer</div>
+                <div class="profile-bio">
+                    An expert in full-stack development, James ensures our code is clean, efficient, and scalable.
+                </div>
+            </div>
+
+            <div class="profile-card">
+                <img src="images/thomas.jpeg" alt="Thomas" class="profile-img">
+                <div class="profile-name">Thomas</div>
+                <div class="profile-role">Lead UI/UX Designer</div>
+                <div class="profile-bio">
+                    Thomas brings creative vision to life, ensuring every user interface is intuitive and beautiful.
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="partners">
+                <div class="partner-box" style="color: #d00;">ORACLE</div>
+                <div class="partner-box" style="color: #00aaff;">MySQL</div>
+                <div class="partner-box" style="color: #444;">Microsoft</div>
+            </div>
+            <div style="font-size: 12px; color: #666;">
+                &copy; 2025 The Hot Beans. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
