@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hot Beans Web Dev - Modern Redesign</title>
     <style>
         /* --- 1. GLOBAL & RESET --- */
@@ -13,7 +12,6 @@
         }
 
         body {
-            /* ADVANCED: Dark Gradient Background */
             background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
             color: #ffffff;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -22,7 +20,6 @@
 
         /* --- 2. HEADER SECTION --- */
         .HeaderRow {
-            /* Glassmorphism Effect */
             background: rgba(255, 255, 255, 0.05);
             backdrop-filter: blur(10px);
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -35,7 +32,6 @@
 
         .HeaderColumnLeft img {
             height: 80px;
-            /* Add a glow to the logo */
             filter: drop-shadow(0 0 5px rgba(0, 255, 255, 0.5));
         }
 
@@ -48,7 +44,6 @@
             font-weight: bold;
             text-transform: uppercase;
             letter-spacing: 2px;
-            /* Gradient Text */
             background: linear-gradient(to right, #00c6ff, #0072ff);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -68,24 +63,23 @@
             border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         }
 
-            .topnav a {
-                color: #fff;
-                text-decoration: none;
-                padding: 10px 20px;
-                margin: 0 5px;
-                font-size: 1.1em;
-                border-radius: 5px;
-                transition: all 0.3s ease;
-                display: inline-block; /* Fix for padding on inline elements */
-            }
+        .topnav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 5px;
+            font-size: 1.1em;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
 
-                .topnav a:hover {
-                    background-color: #00c6ff;
-                    color: #000;
-                    box-shadow: 0 0 10px #00c6ff;
-                }
+        .topnav a:hover {
+            background-color: #00c6ff;
+            color: #000;
+            box-shadow: 0 0 10px #00c6ff;
+        }
 
-        /* --- 4. MAIN CONTENT LAYOUT --- */
+        /* --- 4. MAIN CONTENT --- */
         .row {
             padding: 40px 5%;
             display: flex;
@@ -94,111 +88,86 @@
             justify-content: center;
         }
 
-        /* Left Column (Spacer) */
-        .columnLeft {
-            flex: 1;
-            min-width: 50px;
-        }
+        .columnLeft { flex: 1; min-width: 50px; }
 
-        /* Center Content Card */
         .columnCentre {
             flex: 3;
-            background: rgba(255, 255, 255, 0.1); /* See-through card */
+            background: rgba(255, 255, 255, 0.1);
             padding: 40px;
             border-radius: 15px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.3);
             border: 1px solid rgba(255, 255, 255, 0.1);
-            text-align: left;
         }
 
-            .columnCentre h1 {
-                color: #00c6ff;
-                margin-bottom: 10px;
-                border-bottom: 2px solid #0072ff;
-                display: inline-block;
-            }
+        .columnCentre h1 { color: #00c6ff; margin-bottom: 10px; }
+        .columnCentre ul { margin: 20px; line-height: 1.8; }
 
-            .columnCentre ul {
-                margin-top: 20px;
-                margin-left: 20px;
-                line-height: 1.8;
-            }
-
-        /* Right Column (The Spinner) */
         .columnRight {
             flex: 2;
             display: flex;
             align-items: center;
             justify-content: center;
-            overflow: visible; /* Allows image to be big */
         }
 
-        /* --- 5. THE SPINNING IMAGE EFFECT --- */
         .spinning-logo {
-            width: 250px; /* Make it BIG */
+            width: 250px;
             height: 250px;
             object-fit: cover;
-            border-radius: 50%; /* Make it circular */
+            border-radius: 50%;
             border: 4px solid #00c6ff;
-            /* The Animation */
             animation: spin-right 8s linear infinite;
-            /* The Glow */
             box-shadow: 0 0 30px rgba(0, 198, 255, 0.6);
         }
 
         @keyframes spin-right {
-            from {
-                transform: rotate(0deg);
-            }
-
-            to {
-                transform: rotate(360deg);
-            }
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
         }
 
-        /* --- 6. FOOTER & SOCIALS --- */
+        /* --- 5. FIXED FOOTER & PARTNERS --- */
         .footer {
             text-align: center;
-            padding: 40px 0;
+            padding: 40px 20px;
             margin-top: 50px;
             background: rgba(0,0,0,0.5);
-            /* FIXED: Standardized to 'images/' and fixed the quote mismatch error */
-            background-image: url('images/OraclePartner.jpg'), url('images/MicrosoftPartner.jpg'), url('images/mysqlpartner.png');
-            background-position: 20% center, 50% center, 80% center;
-            background-size: 80px;
-            background-repeat: no-repeat;
-            height: 150px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
         }
 
-        table.social-table {
-            margin: -80px auto 20px; /* Pull up over footer */
-            position: relative;
+        .partner-logos {
+            display: flex;
+            gap: 40px;
+            justify-content: center;
+            flex-wrap: wrap;
+            opacity: 0.8;
+        }
+
+        .partner-logos img {
+            height: 60px;
+            filter: grayscale(100%) brightness(1.5);
+            transition: 0.3s;
+        }
+
+        .partner-logos img:hover {
+            filter: grayscale(0%);
+        }
+
+        /* FIXED: Social table no longer overlaps */
+        .social-container {
             background: #fff;
-            padding: 10px 20px;
+            padding: 12px 30px;
             border-radius: 50px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+            display: flex;
+            gap: 20px;
         }
 
-            table.social-table td {
-                padding: 0 10px;
-            }
-
-        /* Helper for responsive mobile */
+        /* --- RESPONSIVE --- */
         @media screen and (max-width: 768px) {
-            .row {
-                flex-direction: column;
-            }
-
-            .spinning-logo {
-                width: 150px;
-                height: 150px;
-                margin-top: 20px;
-            }
-            
-            .footer {
-                 background-size: 50px; /* Smaller partner logos on mobile */
-                 background-position: 10% center, 50% center, 90% center;
-            }
+            .row { flex-direction: column; }
+            .spinning-logo { width: 150px; height: 150px; }
         }
     </style>
 </head>
@@ -206,7 +175,6 @@
 
     <div class="HeaderRow">
         <div class="HeaderColumnLeft">
-            <!-- FIXED: Ensure folder is named 'images' lowercase -->
             <img src="images/logo.png" alt="Logo">
         </div>
         <div class="HeaderColumnRight">
@@ -225,15 +193,11 @@
     </div>
 
     <div class="row">
-
         <div class="columnLeft"></div>
-
         <div class="columnCentre">
             <h1>Welcome to Hot Beans</h1>
             <h3>Professional Website Development</h3>
-
-            <p>Please browse around the site to find what you are looking for. Follow the links to find more about:</p>
-
+            <p>Please browse around the site to find what you are looking for:</p>
             <ul>
                 <li>Our Company Profile</li>
                 <li>Our Employees & Teams</li>
@@ -241,27 +205,26 @@
                 <li>How to apply to work for us</li>
                 <li>Links to our partner sites</li>
             </ul>
-
             <h2>Come back soon!</h2>
         </div>
-
         <div class="columnRight">
-            <!-- FIXED: Changed 'Images' to 'images' -->
-            <img src="images/logo.png" class="spinning-logo" alt="Spinning Logo">
+            <img src="Images/logo.png" class="spinning-logo" alt="Spinning Logo">
         </div>
-
     </div>
 
-    <div class="footer"></div>
+    <div class="footer">
+        <div class="partner-logos">
+            <img src="Images/OraclePartner.jpg" alt="Oracle">
+            <img src="Images/MicrosoftPartner.jpg" alt="Microsoft">
+            <img src="Images/mysqlpartner.png" alt="MySQL">
+        </div>
 
-    <table class="social-table">
-        <tr>
-            <!-- FIXED: Changed 'Images' to 'images' for all -->
-            <td><img width="40" src="images/Greg Liebert company.png" alt="Greg"></td>
-            <td><img width="40" src="images/sfx images.png" alt="SFX"></td>
-            <td><img width="40" src="images/instagram.png" alt="Insta"></td>
-        </tr>
-    </table>
+        <div class="social-container">
+            <img width="40" src="Images/Greg Liebert company.png" alt="Greg">
+            <img width="40" src="Images/sfx images.png" alt="SFX">
+            <img width="40" src="Images/instagram.png" alt="Instagram">
+        </div>
+    </div>
 
 </body>
 </html>
